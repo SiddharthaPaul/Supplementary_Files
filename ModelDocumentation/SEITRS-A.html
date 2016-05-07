@@ -1,0 +1,1328 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv='Content-Type' content='Type=text/html; charset=utf-8'>
+<title>Documentation of SEITRS</title>
+<style type='text/css'>
+  table.results {
+  		border-width: 1px;
+  		border-spacing: 0px;
+  		border-collapse: collapse;
+  		border-style: solid;
+  		border-color: gray;
+  		background-color: White;
+ 		}
+  	table.results th	{
+  		font-size: smaller;
+  		background-color:blue;
+  		color:White;
+  		border-style: solid;
+  		border-width: 1px;
+ 		}
+  	table.results td {
+  		border-style: solid;
+  		vertical-align:top;
+  		font-size:smaller;
+  		border-width: 1px;
+  		padding: 0px 5px 0px 5px;
+  		border-color: gray;
+  		background-color: White;
+  		text-align:left;
+ 		}
+  table.sample {
+		min-width: 400px;
+		border-width: 1px;
+		border-spacing: 0;
+		border-style: outset;
+		border-color: gray;
+		border-collapse: collapse;
+	    }
+	table.sample td {
+		font-size:smaller;
+		border-width: 1px;
+		padding: 0px 5px 0px 5px;
+		border-style: solid;
+		border-color: gray;
+		text-align:left;
+		vertical-align:text-top;
+ 		}
+  table.typeLegend {
+		border-width: 1px;
+		border-spacing: 0;
+		border-style: outset;
+		border-color: gray;
+		border-collapse: collapse;
+		background-color: white;
+	    }
+	table.typeLegend td {
+		font-size:smaller;
+		border-width: 1px;
+		padding: 0px 5px 0px 5px;
+		border-style: solid;
+		border-color: gray;
+		background-color: #f8f8ff;
+		text-align:left;
+ 	}
+	ul.specials li {
+		color:white;
+ 	}
+	ul.specials li span {
+		color:navy;
+ 	}
+	ul.footnote li {
+		font-size: normal;
+ 	}
+ 	.verticaltext {
+ 	      writing-mode: tb-rl;
+ 	      filter: flipv fliph;
+ 	}
+
+				  ul 
+				   {
+					list-style: disc;
+					margin-top: 0;
+				   }
+</style>
+</head>
+<body style='font-family:Microsoft Sans Serif; font-size:x-small;'>
+<center><a name='top' />
+<h2 style='color:Blue'><br/>Documentation of <span style='border-bottom: 5px double #0000ff;'>SEITRS</span></h2></center>
+<center><h3>View the 26 variables sorted by 
+<a href='SEITRS-T.html'>type</a>, <a href='SEITRS-M.html'>module</a>, <a href='SEITRS-G.html'>group</a>, <a href='SEITRS-MGA.html'>module/group/name</a>, <a href='SEITRS-V.html'>view</a>, <a href='#levelStructure'>Level Structure</a>, or in a <a href='#byView'>view summary</a>.
+</h3></center>
+<center>
+	<b><center><span style='font-size: larger'>Model Assessment Results</span></center></b>
+	<br />
+	<table class='results' width='50%'>
+		<tr>
+		<th>Model Information</th>
+		<th style='text-align:center;' width='20%'>Number</th>
+		</tr>
+		<tr>
+			<td><div title='Total number of variables in your project..'>Total Number of Variables</div></td>
+		<td><center>26</center></td>
+		</tr>
+		<tr>
+			<td><div title='Total number of macros defined in your model.'><a href='#totalStocks'>Total Number of State Variables</a> (Level+Smooth+Delay Variables)</div></td>
+			<td><center>6 (23.1%)</center></td>
+		</tr>
+		<tr>
+			<td><div title='Total Number of Stocks'>Total Number of Stocks (Stocks in Level+Smooth+Delay Variables) &dagger;</div></td>
+			<td><center>6 (23.1%)</center></td>
+		</tr>
+		<tr>
+			<td><div title='Total Number of Macros'><a href='#macros'>Total Number of Macros</a></div></td>
+		<td><center>0</center></td>
+		</tr>
+		<tr>
+		<tr>
+			<td colspan='2'></td>		</tr>
+		<tr>
+			<td colspan='2'></td>		</tr>
+		<tr>
+			<td colspan='2'></td>		</tr>
+
+		</tr>
+		<tr>
+			<td><div title='Variables with Source Information'><a href='#varsWithSource'>Variables with Source Information</a></div></td>
+			<td><center>0</center></td>
+		</tr>
+		<tr>
+			<td><div title='Variables with Dimensionless Units'><a href='#dimensionlessErrors'>Variables with Dimensionless Units</a></div></td>
+			<td><center>1 (3.8%)</center></td>
+		</tr>
+		<tr>
+			<td><div title='Variables with Predefined Min or Max Values'><a href='#predefinedMinMax'>Variables without Predefined Min or Max Values</a></div></td>
+			<td><center>24 (92.3%)</center></td>
+		</tr>
+		<tr>
+			<td><div title='Function Sensitivity Parameters'><a href='#varsMetaDataFSP'>Function Sensitivity Parameters</a></div></td>
+			<td><center>0</center></td>
+		</tr>
+		<tr>
+			<td><div title='Data Lookup Tables'><a href='#varsMetaDataLookup'>Data Lookup Tables</a></div></td>
+			<td><center>0</center></td>
+		</tr>
+		<tr>
+		<tr>
+			<td colspan='2'></td>		</tr>
+		<tr>
+			<td colspan='2'></td>		</tr>
+		<tr>
+			<td colspan='2'></td>		</tr>
+
+		</tr>
+		<tr>
+			<td><div title='Time Unit'>Time Unit</div></td>
+			<td><center>Day</center></td>
+		</tr>
+		<tr>
+			<td><div title='Initial Time'>Initial Time</div></td>
+			<td><center>0</center></td>
+		</tr>
+		<tr>
+			<td><div title='Final Time'>Final Time</div></td>
+			<td><center>69</center></td>
+		</tr>
+		<tr>
+			<td><div title='Reported Time Interval'>Reported Time Interval</div></td>
+			<td><center>1</center></td>
+		</tr>
+		<tr>
+			<td><div title='Time Step'>Time Step</div></td>
+			<td><center>0.001</center></td>
+		</tr>
+		<tr>
+		<tr>
+			<td colspan='2'></td>		</tr>
+		<tr>
+			<td colspan='2'></td>		</tr>
+		<tr>
+			<td colspan='2'></td>		</tr>
+
+		</tr>
+		<tr>
+			<td><div title='Model Is Fully Formulated'>Model Is Fully Formulated</div></td>
+			<td><center>Yes</center></td>
+		</tr>
+		<tr>
+			<td><div title='Modeler-Defined Groups'>Modeler-Defined Groups</div></td>
+			<td><center><b>- No -</b></center></td>
+		</tr>
+		<tr>
+			<td><div title='VPM File Available'>VPM File Available</div></td>
+			<td><center><b>- No -</b></center></td>
+		</tr>
+	</table>
+	<br />
+	<table class='results' width='50%'>
+	</table>
+	<br />
+	<table class='results' width='50%'>
+		<tr>
+		<th>Warnings</th>
+		<th style='text-align:center;' width='20%'>Number</th>
+		</tr>
+		<tr>
+			<td><div title='Undocumented Equations'><a href='#undocumentedList'>Undocumented Equations</a></div></td>
+			<td><center>0</center></td>
+		</tr>
+		<tr>
+			<td><div title='Equations with Embedded Data'  style='color:Blue'><a href='#embedded'>Equations with Embedded Data</a> (0 and 1 constants ignored)</div></td>
+			<td><center>3 (11.5%)</center></td>
+		</tr>
+		<tr>
+			<td><div title='Equations With Unit Errors or Warnings'><a href='#unitErrors'>Equations With Unit Errors or Warnings</a></div></td>
+			<td><center>Unavailable</center></td>
+		</tr>
+		<tr>
+			<td><div title='Variables Not in Any View'><a href='#unreferencedVariables'>Variables Not in Any View</a></div></td>
+			<td><center>0</center></td>
+		</tr>
+		<tr>
+			<td><div title='Incompletely Defined Subscripted Variables'><a href='#incomplete'>Incompletely Defined Subscripted Variables</a></div></td>
+			<td><center>0</center></td>
+		</tr>
+		<tr>
+			<td><div title='Nonmonotonic Lookup Functions'><a href='#multieffect'>Nonmonotonic Lookup Functions</a></div></td>
+			<td><center>0</center></td>
+		</tr>
+		<tr>
+			<td><div title='Cascading (Chained) Lookup Functions'><a href='#cascading'>Cascading (Chained) Lookup Functions</a></div></td>
+			<td><center>0</center></td>
+		</tr>
+		<tr>
+			<td><div title='Non-Zero End Sloped Lookup Functions'><a href='#nonhoriz'>Non-Zero End Sloped Lookup Functions</a></div></td>
+			<td><center>0</center></td>
+		</tr>
+		<tr>
+			<td><div title='Equations with "IF THEN ELSE" Functions'><a href='#ifthenelse'>Equations with "IF THEN ELSE" Functions</a></div></td>
+			<td><center>0</center></td>
+		</tr>
+		<tr>
+			<td><div title='Equations with "MIN" or "MAX" Functions'><a href='#minormax'>Equations with "MIN" or "MAX" Functions</a></div></td>
+			<td><center>0</center></td>
+		</tr>
+		<tr>
+			<td><div title='Equations with "STEP", "PULSE", or Related Functions'><a href='#steporpulse'>Equations with "STEP", "PULSE", or Related Functions</a></div></td>
+			<td><center>0</center></td>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+		</tr>
+	</table>
+	<br />
+	<table class='results' width='50%'>
+		<tr>
+		<th>Potential Omissions</th>
+		<th style='text-align:center;' width='20%'>Number</th>
+		</tr>
+		<tr>
+			<td><div title='Unused Variables'><a href='#unusedVariables'>Unused Variables</a></div></td>
+			<td><center>2</center></td>
+		</tr>
+		<tr>
+			<td><div title='Supplementary Variables'><a href='#supplementary'>Supplementary Variables</a></div></td>
+			<td><center>0</center></td>
+		</tr>
+		<tr>
+			<td><div title='Supplementary Variables Being Used'><a href='#usedSpplementary'>Supplementary Variables Being Used</a></div></td>
+			<td><center>0</center></td>
+		</tr>
+		<tr>
+			<td><div title='Complex Variable Formulations (Richardson&apos;s Rule)
+hi there'><a href='#complexForm'>Complex Variable Formulations (Richardson's Rule = 3)</a></div></td>
+			<td><center>2</center></td>
+		</tr>
+		<tr>
+			<td><div title='Complex Stock Formulations'><a href='#complexStock'>Complex Stock Formulations</a></div></td>
+			<td><center>0</center></td>
+		</tr>
+	</table>
+	</table>
+</center>
+<br/>
+<table align='center' width='100%'>
+<tr>
+<td style='text-align:right'><span style='font-size: smaller;'><b>Types:</b></span></td>
+<td>
+<table class='typeLegend' width='100%'>
+<tr><td width='20%'><img src='SEITRS/icon-s-sm.png'/> <b>L   </b>: Level (6 / <b>6</b>) *</td>
+							<td width='20%%'><img src='SEITRS/icon-s-sm.png'/><b>SM </b>: Smooth (0 / <b>0</b>) *</td>
+							<td width='20%%'>								  <b>DE  </b>: Delay (0 / <b>0</b>)  * &dagger;</td>
+							<td width='20%%'><img src='SEITRS/icon-si-i-c-a-d.png'/><b>LI </b>: Level Initial (0)</td>
+							<td width='20%%'><img src='SEITRS/icon-si-i-c-a-d.png'/><b>I  </b>: Initial (0)</td>
+							</tr><tr>
+							<td width='20%%'><img src='SEITRS/icon-si-i-c-a-d.png'/><b>C  </b>: Constant (11)</td>
+							<td width='20%%'><img src='SEITRS/icon-f.png'/><b>F  </b>: Flow (7)</td>
+							<td width='20%%'><img src='SEITRS/icon-si-i-c-a-d.png'/><b>A  </b>: Auxiliary (9)</td>
+							<td width='20%%'><img src='SEITRS/icon-sub.png'/><b>Sub</b>: Subscripts (0)</td>
+							<td width='20%%'><img src='SEITRS/icon-si-i-c-a-d.png'/><b>D  </b>: Data (0)</td>
+							</tr><tr>
+							<td width='20%%'><img src='SEITRS/icon-g.png'/><b>G  </b>: Game (0)</td>
+							<td width='20%%'><img src='SEITRS/icon-l.png'/><b>T  </b>: Lookup (0 / <b>0</b>) &dagger;&dagger;</td>
+							<td width='20%%'>&nbsp;</td>
+							<td width='20%%'>&nbsp;</td>
+							<td width='20%%'>&nbsp;</td>
+							</tr></table>
+</td>
+</tr>
+<tr><td></td><td style='font-size:smaller;' colspan='5'>* (state variables / <b>total stocks</b>)</td></tr>
+<tr><td></td><td style='font-size:smaller;' colspan='5'>&dagger; Total stocks do not include fixed delay variables.</td></tr>
+<tr><td></td><td style='font-size:smaller;' colspan='5'>&dagger;&dagger; (lookup variables / <b>lookup tables</b>).</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+<td style='text-align:right'><span style='font-size: smaller;'><b>Groups:</b></span></td>
+<td>
+<table class='typeLegend' width='100%'>
+<tr>
+<td width='20%' valign='top'><b>Control</b> (4)
+<br />Simulation Control Parameters
+</td>
+<td width='20%' valign='top'><b>SEITRS</b> (22)
+<br />(Default)
+</td>
+<td width='60%' colspan='3'></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style='text-align:right'><span style='font-size: smaller;'><b>Modules:</b></span></td>
+<td>
+<table class='typeLegend' width='100%'>
+<tr>
+<td width='20%'><b>Default</b> (26)</td><td width='80%' colspan='4'></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style='text-align:right'><span style='font-size: smaller;'><b>Views:</b></span></td>
+<td>
+<table class='typeLegend' width='100%'>
+<tr>
+<td width='20%'><a href='' /><b>View&#32;1</b> (22)</td><td width='20%'>&nbsp;</td><td width='60%' colspan='3'></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style='text-align:right'><span style='font-size: smaller;'><b>Search:</b></span></td>
+<td colspan='3'>
+&bull;&bull;&bull;&nbsp;&nbsp;&nbsp;
+<a href='#quickIndex0'>a-b</a>&nbsp;&nbsp;&nbsp;
+c-d&nbsp;&nbsp;&nbsp;
+<a href='#quickIndex1'>e-f</a>&nbsp;&nbsp;&nbsp;
+<a href='#quickIndex5'>g-h</a>&nbsp;&nbsp;&nbsp;
+<a href='#quickIndex6'>i-j</a>&nbsp;&nbsp;&nbsp;
+<a href='#quickIndex10'>k-l</a>&nbsp;&nbsp;&nbsp;
+<a href='#quickIndex11'>m-n</a>&nbsp;&nbsp;&nbsp;
+<a href='#quickIndex12'>o-p</a>&nbsp;&nbsp;&nbsp;
+<a href='#quickIndex13'>q-r</a>&nbsp;&nbsp;&nbsp;
+<a href='#quickIndex16'>s-t</a>&nbsp;&nbsp;&nbsp;
+u-v&nbsp;&nbsp;&nbsp;
+<a href='#quickIndex24'>w-x</a>&nbsp;&nbsp;&nbsp;
+y-z&nbsp;&nbsp;&nbsp;
+&bull;&bull;&bull;&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table><br/>
+<table class='sample'>
+<tr>
+<td style='vertical-align:bottom; color:Blue'><center><a href='SEITRS-M.html'>Module</a></center></td>
+<td style='vertical-align:bottom; color:Blue'><center><a href='SEITRS-G.html'>Group</a></center></td>
+<td style='vertical-align:bottom; color:Blue'><center><a href='SEITRS-T.html'>Type</a></center></td>
+<td style='vertical-align:bottom; color:Blue'><a href='SEITRS-A.html'><b><i>Variable Name</i></b></a> and Description</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#1<br/>F,A
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+<br/><img src='SEITRS/icon-f.png' />
+</td>
+<td><a name='quickIndex0' />
+<a name='a179' /><b>AR</b> (<span style='color:Red'>Person&#47;Day</span>)
+<br/> = <a href='#a188'>I</a>/<a href='#a159'>TDV</a><br/><b>Description: </b><i>hospital&#32;arrival&#32;rate</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a188'>I</a> - <span style='color:Green'>Infected&#32;population&#32;waiting&#32;for&#32;treatment</span></li>
+<li><a href='#a191'>T</a> - <span style='color:Green'>Infected&#32;population&#32;and&#32;under&#32;treatment</span></li>
+<li><a href='#a185'>WT</a> - <span style='color:Green'>average&#32;waiting&#32;time&#32;for&#32;medicine</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#2<br/>L
+<br/><img src='SEITRS/icon-s-sm.png' />
+</td>
+<td><a name='quickIndex1' />
+<a name='a189' /><b>E</b> (<span style='color:Red'>Person</span>)
+<br/> = <span style='font-size:x-large'>&#8747;</span><a href='#a182'>IR</a>-<a href='#a183'>ER</a> <i>dt</i> + [44]<br/><b>Description: </b><i>Exposed&#32;population</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a183'>ER</a> - <span style='color:Green'>exposure&#32;rate</span></li>
+<li><a href='#a187'>N</a> - <span style='color:Green'>total&#32;population</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#3<br/>F,A
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+<br/><img src='SEITRS/icon-f.png' />
+</td>
+<td>
+<a name='a183' /><b>ER</b> (<span style='color:Red'>Person&#47;Day</span>)
+<br/> = <a href='#a189'>E</a>/<a href='#a190'>P</a><br/><b>Description: </b><i>exposure&#32;rate</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a189'>E</a> - <span style='color:Green'>Exposed&#32;population</span></li>
+<li><a href='#a188'>I</a> - <span style='color:Green'>Infected&#32;population&#32;waiting&#32;for&#32;treatment</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#4<br/>L
+<br/><img src='SEITRS/icon-s-sm.png' />
+</td>
+<td>
+<a name='a163' /><b>FES</b> (<span style='color:Red'>Person</span>)
+<br/> = <span style='font-size:x-large'>&#8747;</span><a href='#a178'>in</a> <i>dt</i> + [0]<br/><b>Description: </b><i>Final&#32;epidmeic&#32;size</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>Control</td>
+<td style='text-align:center'>#5<br/>C
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+</td>
+<td>
+<a name='a91' /><b>FINAL&#32;TIME</b> (<span style='color:Red'>Day</span>)
+<br/> = 69<br/><b>Description: </b><i>The&#32;final&#32;time&#32;for&#32;the&#32;simulation&#46;</i><br/><b>Not Present In Any View</b><br/></td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#6<br/>C
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+</td>
+<td><a name='quickIndex5' />
+<a name='a139' /><b>gamma</b> (<span style='color:Red'>1&#47;Day</span>)
+<br/> = 0.663<br/><b>Description: </b><i>infectivity</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a182'>IR</a> - <span style='color:Green'>infection&#32;rate</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#7<br/>L
+<br/><img src='SEITRS/icon-s-sm.png' />
+</td>
+<td><a name='quickIndex6' />
+<a name='a188' /><b>I</b> (<span style='color:Red'>Person</span>)
+<br/> = <span style='font-size:x-large'>&#8747;</span><a href='#a183'>ER</a>-<a href='#a176'>RR</a>-<a href='#a179'>AR</a> <i>dt</i> + [1]<br/><b>Description: </b><i>Infected&#32;population&#32;waiting&#32;for&#32;treatment</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a179'>AR</a> - <span style='color:Green'>hospital&#32;arrival&#32;rate</span></li>
+<li><a href='#a182'>IR</a> - <span style='color:Green'>infection&#32;rate</span></li>
+<li><a href='#a187'>N</a> - <span style='color:Green'>total&#32;population</span></li>
+<li><a href='#a176'>RR</a> - <span style='color:Green'>recovery&#32;rate&#32;without&#32;medicine</span></li>
+<li><a href='#a185'>WT</a> - <span style='color:Green'>average&#32;waiting&#32;time&#32;for&#32;medicine</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#8<br/>F,A
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+<br/><img src='SEITRS/icon-f.png' />
+</td>
+<td>
+<a name='a178' /><b>in</b> (<span style='color:Red'>Person&#47;Day</span>)
+<br/> = <a href='#a162'>RRM</a>+<a href='#a176'>RR</a><br/><b>Description: </b><i>total&#32;recovery&#32;rate</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a163'>FES</a> - <span style='color:Green'>Final&#32;epidmeic&#32;size</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>Control</td>
+<td style='text-align:center'>#9<br/>C
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+</td>
+<td>
+<a name='a67' /><b>INITIAL&#32;TIME</b> (<span style='color:Red'>Day</span>)
+<br/> = 0<br/><b>Description: </b><i>The&#32;initial&#32;time&#32;for&#32;the&#32;simulation&#46;</i><br/><b>Not Present In Any View</b><br/><b>Used by:</b><ul>
+
+<li><a href='#notavailable'>Time</a> - <span style='color:Green'>Internally&#32;defined&#32;simulation&#32;time&#46;</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#10<br/>F,A
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+<br/><img src='SEITRS/icon-f.png' />
+</td>
+<td>
+<a name='a182' /><b>IR</b> (<span style='color:Red'>Person&#47;Day</span>)
+<br/> = <a href='#a139'>gamma</a>*(<a href='#a188'>I</a>+<a href='#a186'>k</a>*<a href='#a191'>T</a>)*<a href='#a192'>S</a>/<a href='#a187'>N</a><br/><b>Description: </b><i>infection&#32;rate</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a189'>E</a> - <span style='color:Green'>Exposed&#32;population</span></li>
+<li><a href='#a192'>S</a> - <span style='color:Green'>Susceptible&#32;population</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#11<br/>C
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+</td>
+<td><a name='quickIndex10' />
+<a name='a186' /><b>k</b> (<span style='color:Red'>Dmnl</span>)
+<br/> = 0.5<br/><b>Description: </b><i>Infectivity&#32;of&#32;treatment&#32;class</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a182'>IR</a> - <span style='color:Green'>infection&#32;rate</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#12<br/>A
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+</td>
+<td><a name='quickIndex11' />
+<a name='a187' /><b>N</b> (<span style='color:Red'>Person</span>)
+<br/> = <a href='#a192'>S</a>+<a href='#a189'>E</a>+<a href='#a188'>I</a>+<a href='#a191'>T</a>+<a href='#a193'>R</a><br/><b>Description: </b><i>total&#32;population</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a182'>IR</a> - <span style='color:Green'>infection&#32;rate</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#13<br/>C
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+</td>
+<td><a name='quickIndex12' />
+<a name='a190' /><b>P</b> (<span style='color:Red'>Day</span>)
+<br/> = 2<br/><b>Description: </b><i>incubation&#32;period</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a183'>ER</a> - <span style='color:Green'>exposure&#32;rate</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#14<br/>L
+<br/><img src='SEITRS/icon-s-sm.png' />
+</td>
+<td><a name='quickIndex13' />
+<a name='a193' /><b>R</b> (<span style='color:Red'>Person</span>)
+<br/> = <span style='font-size:x-large'>&#8747;</span><a href='#a176'>RR</a>+<a href='#a162'>RRM</a>-<a href='#a177'>WR</a> <i>dt</i> + [0]<br/><b>Description: </b><i>Recovered&#32;population</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a187'>N</a> - <span style='color:Green'>total&#32;population</span></li>
+<li><a href='#a177'>WR</a> - <span style='color:Green'>waning&#32;rate</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#15<br/>F,A
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+<br/><img src='SEITRS/icon-f.png' />
+</td>
+<td>
+<a name='a176' /><b>RR</b> (<span style='color:Red'>Person&#47;Day</span>)
+<br/> = <a href='#a188'>I</a>/<a href='#a174'>TR</a><br/><b>Description: </b><i>recovery&#32;rate&#32;without&#32;medicine</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a188'>I</a> - <span style='color:Green'>Infected&#32;population&#32;waiting&#32;for&#32;treatment</span></li>
+<li><a href='#a178'>in</a> - <span style='color:Green'>total&#32;recovery&#32;rate</span></li>
+<li><a href='#a193'>R</a> - <span style='color:Green'>Recovered&#32;population</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#16<br/>F,A
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+<br/><img src='SEITRS/icon-f.png' />
+</td>
+<td>
+<a name='a162' /><b>RRM</b> (<span style='color:Red'>Person&#47;Day</span>)
+<br/> = <a href='#a191'>T</a>/<a href='#a160'>TRM</a><br/><b>Description: </b><i>recovery&#32;rate&#32;with&#32;medicine</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a178'>in</a> - <span style='color:Green'>total&#32;recovery&#32;rate</span></li>
+<li><a href='#a193'>R</a> - <span style='color:Green'>Recovered&#32;population</span></li>
+<li><a href='#a191'>T</a> - <span style='color:Green'>Infected&#32;population&#32;and&#32;under&#32;treatment</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#17<br/>L
+<br/><img src='SEITRS/icon-s-sm.png' />
+</td>
+<td><a name='quickIndex16' />
+<a name='a192' /><b>S</b> (<span style='color:Red'>Person</span>)
+<br/> = <span style='font-size:x-large'>&#8747;</span><a href='#a177'>WR</a>-<a href='#a182'>IR</a> <i>dt</i> + [2722]<br/><b>Description: </b><i>Susceptible&#32;population</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a182'>IR</a> - <span style='color:Green'>infection&#32;rate</span></li>
+<li><a href='#a187'>N</a> - <span style='color:Green'>total&#32;population</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>Control</td>
+<td style='text-align:center'>#18<br/>C
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+</td>
+<td>
+<a name='a120' /><b>SAVEPER</b> (<span style='color:Red'>Day&#32;&#91;0&#44;&#63;&#93;</span>)
+<br/> = 1<br/><b>Description: </b><i>The&#32;frequency&#32;with&#32;which&#32;output&#32;is&#32;stored&#46;</i><br/><b>Not Present In Any View</b><br/></td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#19<br/>L
+<br/><img src='SEITRS/icon-s-sm.png' />
+</td>
+<td>
+<a name='a191' /><b>T</b> (<span style='color:Red'>Person</span>)
+<br/> = <span style='font-size:x-large'>&#8747;</span><a href='#a179'>AR</a>-<a href='#a162'>RRM</a> <i>dt</i> + [78]<br/><b>Description: </b><i>Infected&#32;population&#32;and&#32;under&#32;treatment</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a182'>IR</a> - <span style='color:Green'>infection&#32;rate</span></li>
+<li><a href='#a187'>N</a> - <span style='color:Green'>total&#32;population</span></li>
+<li><a href='#a162'>RRM</a> - <span style='color:Green'>recovery&#32;rate&#32;with&#32;medicine</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#20<br/>C
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+</td>
+<td>
+<a name='a159' /><b>TDV</b> (<span style='color:Red'>Day</span>)
+<br/> = 1<br/><b>Description: </b><i>Time&#32;to&#32;distribute&#32;vaccine</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a179'>AR</a> - <span style='color:Green'>hospital&#32;arrival&#32;rate</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>Control</td>
+<td style='text-align:center'>#21<br/>C
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+</td>
+<td>
+<a name='a96' /><b>TIME&#32;STEP</b> (<span style='color:Red'>Day&#32;&#91;0&#44;&#63;&#93;</span>)
+<br/> = 0.001<br/><b>Description: </b><i>The&#32;time&#32;step&#32;for&#32;the&#32;simulation&#46;</i><br/><b>Not Present In Any View</b><br/></td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#22<br/>C
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+</td>
+<td>
+<a name='a174' /><b>TR</b> (<span style='color:Red'>Day</span>)
+<br/> = 10<br/><b>Description: </b><i>time&#32;to&#32;recover&#32;without&#32;medicine</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a176'>RR</a> - <span style='color:Green'>recovery&#32;rate&#32;without&#32;medicine</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#23<br/>C
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+</td>
+<td>
+<a name='a160' /><b>TRM</b> (<span style='color:Red'>Day</span>)
+<br/> = 3.1<br/><b>Description: </b><i>time&#32;to&#32;recover&#32;with&#32;medicine</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a162'>RRM</a> - <span style='color:Green'>recovery&#32;rate&#32;with&#32;medicine</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#24<br/>C
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+</td>
+<td>
+<a name='a175' /><b>TW</b> (<span style='color:Red'>Day</span>)
+<br/> = 365<br/><b>Description: </b><i>waning&#32;time</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a177'>WR</a> - <span style='color:Green'>waning&#32;rate</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#25<br/>F,A
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+<br/><img src='SEITRS/icon-f.png' />
+</td>
+<td><a name='quickIndex24' />
+<a name='a177' /><b>WR</b> (<span style='color:Red'>Person&#47;Day</span>)
+<br/> = <a href='#a193'>R</a>/<a href='#a175'>TW</a><br/><b>Description: </b><i>waning&#32;rate</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+<b>Used by:</b><ul>
+
+<li><a href='#a193'>R</a> - <span style='color:Green'>Recovered&#32;population</span></li>
+<li><a href='#a192'>S</a> - <span style='color:Green'>Susceptible&#32;population</span></li></ul>
+</td>
+</tr>
+
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS<br/>(Default)</td>
+<td style='text-align:center'>#26<br/>A
+<br/><img src='SEITRS/icon-si-i-c-a-d.png' />
+</td>
+<td>
+<a name='a185' /><b>WT</b> (<span style='color:Red'>Day</span>)
+<br/> = <a href='#a188'>I</a>/<a href='#a179'>AR</a><br/><b>Description: </b><i>average&#32;waiting&#32;time&#32;for&#32;medicine</i><br/><b>Present in 1 view:</b>
+<ul>
+<li><a href=''>View&#32;1</a></li>
+</ul>
+</td>
+</tr>
+
+</table><br />
+<hr style='height:1px; color:Blue'/>
+<a name='predefinedMinMax' />
+<h3>List of 24 Variables Without Predefined Min or Max Values</h3><table class='sample'>
+<tr>
+<td style='vertical-align:bottom; color:Blue'><center>Module</center></td>
+<td style='vertical-align:bottom; color:Blue'><center>Group</center></td>
+<td style='vertical-align:bottom; color:Blue'><center>Type</center></td>
+<td style='vertical-align:bottom; color:Blue'><b><i>Undocumented Variable</i></b> (24)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>F,A</td>
+<td><a href='#a179'>AR</a> (<span style='color:Red'>Person&#47;Day</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>L</td>
+<td><a href='#a189'>E</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>F,A</td>
+<td><a href='#a183'>ER</a> (<span style='color:Red'>Person&#47;Day</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>L</td>
+<td><a href='#a163'>FES</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>Control</td>
+<td style='text-align:center'>C</td>
+<td><a href='#a91'>FINAL&#32;TIME</a> (<span style='color:Red'>Day</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>C</td>
+<td><a href='#a139'>gamma</a> (<span style='color:Red'>1&#47;Day</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>L</td>
+<td><a href='#a188'>I</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>F,A</td>
+<td><a href='#a178'>in</a> (<span style='color:Red'>Person&#47;Day</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>Control</td>
+<td style='text-align:center'>C</td>
+<td><a href='#a67'>INITIAL&#32;TIME</a> (<span style='color:Red'>Day</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>F,A</td>
+<td><a href='#a182'>IR</a> (<span style='color:Red'>Person&#47;Day</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>C</td>
+<td><a href='#a186'>k</a> (<span style='color:Red'>Dmnl</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>A</td>
+<td><a href='#a187'>N</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>C</td>
+<td><a href='#a190'>P</a> (<span style='color:Red'>Day</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>L</td>
+<td><a href='#a193'>R</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>F,A</td>
+<td><a href='#a176'>RR</a> (<span style='color:Red'>Person&#47;Day</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>F,A</td>
+<td><a href='#a162'>RRM</a> (<span style='color:Red'>Person&#47;Day</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>L</td>
+<td><a href='#a192'>S</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>L</td>
+<td><a href='#a191'>T</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>C</td>
+<td><a href='#a159'>TDV</a> (<span style='color:Red'>Day</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>C</td>
+<td><a href='#a174'>TR</a> (<span style='color:Red'>Day</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>C</td>
+<td><a href='#a160'>TRM</a> (<span style='color:Red'>Day</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>C</td>
+<td><a href='#a175'>TW</a> (<span style='color:Red'>Day</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>F,A</td>
+<td><a href='#a177'>WR</a> (<span style='color:Red'>Person&#47;Day</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>A</td>
+<td><a href='#a185'>WT</a> (<span style='color:Red'>Day</span>)</td>
+</tr>
+</table>
+<hr style='height:1px; color:Blue'/>
+<a name='complexForm' />
+<h3>Formulation Complexity Summary (Violations of Richardson's Rule)</h3>
+<table class='sample'>
+<tr>
+<td style='vertical-align:bottom; color:Blue'><center>Module</center></td>
+<td style='vertical-align:bottom; color:Blue'><center>Group</center></td>
+<td style='vertical-align:bottom; color:Blue'><center>Type</center></td>
+<td style='vertical-align:bottom; color:Blue'>Variable</td>
+<td style='vertical-align:bottom; color:Blue'><center>Complexity Score</center></td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>A</td>
+<td><a href='#a187'>N</a> (<span style='color:Red'>Person</span>)</td>
+<td><center>5</center></td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>F,A</td>
+<td><a href='#a182'>IR</a> (<span style='color:Red'>Person&#47;Day</span>)</td>
+<td><center>6</center></td>
+</tr>
+</table>
+<hr style='height:1px; color:Blue'/>
+<a name='embedded' />
+<h3>List of 3 Equations with Embedded Data (0 and 1 constants ignored)</h3><table class='sample'>
+<tr>
+<td style='vertical-align:bottom; color:Blue'><center>Module</center></td>
+<td style='vertical-align:bottom; color:Blue'><center>Group</center></td>
+<td style='vertical-align:bottom; color:Blue'><center>Type</center></td>
+<td style='vertical-align:bottom; color:Blue'><b><i>Variable</i></b> (3)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>L</td>
+<td><a href='#a189'>E</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>L</td>
+<td><a href='#a192'>S</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>L</td>
+<td><a href='#a191'>T</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+</table>
+<hr style='height:1px; color:Blue'/>
+<a name='totalStocks' />
+<h3>List of 6 State Variables</h3>
+<table class='sample'>
+<tr>
+<td style='vertical-align:bottom; color:Blue'><center>Module</center></td>
+<td style='vertical-align:bottom; color:Blue'><center>Group</center></td>
+<td style='vertical-align:bottom; color:Blue'><center>Type</center></td>
+<td style='vertical-align:bottom; color:Blue'>Variable</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>L</td>
+<td><a href='#a189'>E</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>L</td>
+<td><a href='#a163'>FES</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>L</td>
+<td><a href='#a188'>I</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>L</td>
+<td><a href='#a193'>R</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>L</td>
+<td><a href='#a192'>S</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>L</td>
+<td><a href='#a191'>T</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+</table>
+<hr style='height:1px; color:Blue'/>
+<a name='unusedVariables' />
+<h3>List of 2 Unused Variables</h3><table class='sample'>
+<tr>
+<td style='vertical-align:bottom; color:Blue'><center>Module</center></td>
+<td style='vertical-align:bottom; color:Blue'><center>Group</center></td>
+<td style='vertical-align:bottom; color:Blue'><center>Type</center></td>
+<td style='vertical-align:bottom; color:Blue'><b><i>Unused Variable</i></b> (2)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>L</td>
+<td><a href='#a163'>FES</a> (<span style='color:Red'>Person</span>)</td>
+</tr>
+<tr>
+<td style='text-align:center'>Default</td>
+<td style='text-align:center'>SEITRS</td>
+<td style='text-align:center'>A</td>
+<td><a href='#a185'>WT</a> (<span style='color:Red'>Day</span>)</td>
+</tr>
+</table>
+<hr style='height:1px; color:Blue'/>
+<a name='byView' />
+<h3>List of 1 View and Its 26 Variables</h3><br/><img src='SEITRS/variableViewsChart.png'/><br/><br/><table class='sample'>
+<tr>
+<td>&nbsp</td>
+<td style='vertical-align:bottom; color:Blue'><center><a href=''>View&#32;1</a></center></td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><b>Total:</b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:center;'><b>22</b></td>
+<td style='vertical-align:bottom; color:Blue; '><b>:Total</b></td>
+</tr>
+
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a179'>AR</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a179'>AR</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a189'>E</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a189'>E</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a183'>ER</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a183'>ER</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a163'>FES</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a163'>FES</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a91'>FINAL&#32;TIME</a> (in 0 views)</td>
+<td style='text-align:center;color:White;'><b><font style='background-color:White'>&nbsp;</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a91'>FINAL&#32;TIME</a> (in 0 views)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a139'>gamma</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a139'>gamma</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a188'>I</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a188'>I</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a178'>in</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a178'>in</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a67'>INITIAL&#32;TIME</a> (in 0 views)</td>
+<td style='text-align:center;color:White;'><b><font style='background-color:White'>&nbsp;</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a67'>INITIAL&#32;TIME</a> (in 0 views)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a182'>IR</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a182'>IR</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a186'>k</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a186'>k</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a187'>N</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a187'>N</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a190'>P</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a190'>P</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a193'>R</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a193'>R</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a176'>RR</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a176'>RR</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a162'>RRM</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a162'>RRM</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a192'>S</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a192'>S</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a120'>SAVEPER</a> (in 0 views)</td>
+<td style='text-align:center;color:White;'><b><font style='background-color:White'>&nbsp;</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a120'>SAVEPER</a> (in 0 views)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a191'>T</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a191'>T</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a159'>TDV</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a159'>TDV</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a96'>TIME&#32;STEP</a> (in 0 views)</td>
+<td style='text-align:center;color:White;'><b><font style='background-color:White'>&nbsp;</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a96'>TIME&#32;STEP</a> (in 0 views)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a174'>TR</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a174'>TR</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a160'>TRM</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a160'>TRM</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a175'>TW</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a175'>TW</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a177'>WR</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a177'>WR</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><a href='#a185'>WT</a> (in 1 view)</td>
+<td style='text-align:center;color:Blue;'><b><font style='background-color:Blue'>X</font></b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:left'><a href='#a185'>WT</a> (in 1 view)</td>
+</tr>
+<tr>
+<td style='vertical-align:bottom; color:Blue; text-align:right'><b>Total:</b></td>
+<td style='vertical-align:bottom; color:Blue; text-align:center;'><b>22</b></td>
+<td style='vertical-align:bottom; color:Blue; '><b>:Total</b></td>
+</tr>
+
+<tr>
+<td>&nbsp</td>
+<td style='vertical-align:top; color:Blue'><center><a href=''>View&#32;1</a></center></td>
+<td>&nbsp;</td>
+</tr>
+
+</table>
+<h3>* Includes <i>Time</i>, if used in a view. Excludes variables not present in any view.</h3>
+
+<hr style='height:1px; color:Blue'/>
+<a name='levelStructure' />
+<div style='font-size:larger;'>
+	<h3>Level Structure &dagger;</h3>
+<p/>E = <span style='font-size:x-large'>&#8747;</span><a href='#a182'>IR</a>-<a href='#a183'>ER</a> <i>dt</i> + [44]
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;ER = <a href='#a189'>E</a>/<a href='#a190'>P</a>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;IR = <a href='#a139'>gamma</a>*(<a href='#a188'>I</a>+<a href='#a186'>k</a>*<a href='#a191'>T</a>)*<a href='#a192'>S</a>/<a href='#a187'>N</a>
+<p/>FES = <span style='font-size:x-large'>&#8747;</span><a href='#a178'>in</a> <i>dt</i> + [0]
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;in = <a href='#a162'>RRM</a>+<a href='#a176'>RR</a>
+<p/>I = <span style='font-size:x-large'>&#8747;</span><a href='#a183'>ER</a>-<a href='#a176'>RR</a>-<a href='#a179'>AR</a> <i>dt</i> + [1]
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;AR = <a href='#a188'>I</a>/<a href='#a159'>TDV</a>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;RR = <a href='#a188'>I</a>/<a href='#a174'>TR</a>
+<p/>R = <span style='font-size:x-large'>&#8747;</span><a href='#a176'>RR</a>+<a href='#a162'>RRM</a>-<a href='#a177'>WR</a> <i>dt</i> + [0]
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;RRM = <a href='#a191'>T</a>/<a href='#a160'>TRM</a>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;WR = <a href='#a193'>R</a>/<a href='#a175'>TW</a>
+<p/>S = <span style='font-size:x-large'>&#8747;</span><a href='#a177'>WR</a>-<a href='#a182'>IR</a> <i>dt</i> + [2722]
+<p/>T = <span style='font-size:x-large'>&#8747;</span><a href='#a179'>AR</a>-<a href='#a162'>RRM</a> <i>dt</i> + [78]
+<p/><b>&dagger;&nbsp;&nbsp;<i>Level Structure Report</i> still under development.</b>
+<div>
+<hr style='height:1px; color:Blue'/>
+<a name='dimensionlessErrors' />
+<h3>List of 1 Equation with Dimensionless Units</h3><table class='sample'>
+<tr>
+<td style='color:Blue'><center>Module</center></td>
+<td style='color:Blue'><center>Group</center></td>
+<td style='color:Blue'><center>Type</center></td>
+<td style='color:Blue'>Variable</td>
+</tr>
+<tr>
+<td style='vertical-align:top; text-align:center'>Default</td>
+<td style='vertical-align:top; text-align:center'>SEITRS</td>
+<td style='vertical-align:top; text-align:center'>C</td>
+<td style='vertical-align:top'><a href='#a186'>k</a> (<span style='color:Red'>Dmnl</span>)</td>
+</tr>
+</table>
+<hr style='height:1px; color:Blue'/>
+<div align='right' style='font-size:small;'>
+<span style='font-family:Microsoft Sans Serif; font-size:x-small;'>
+Source file: SEITRS.mdl (19Dec2015 - 1:05:06 PM)
+<br />Report Created on 19/Dec/2015 - 1:12:27 PM<br/><a href='http://www.dis.anl.gov/feedback/sys_dyn_model.php?tname=your name&temail=your email&tphone=&tlocation=&tversion=5.0'>SDM-Doc Tool</a> Version 5.0
+<br /><a href='http://www.dis.anl.gov'>Decision and Information Sciences Division</a>
+<br /><a href='http://www.anl.gov'>Argonne National Laboratory</a>
+</span>
+</div>
+</body>
+</html>

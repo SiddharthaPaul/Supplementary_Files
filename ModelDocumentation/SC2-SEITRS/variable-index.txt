@@ -1,0 +1,85 @@
+ABM	backlog discrepancy adjustment rate at Distributor
+ABR	backlog discrepancy adjustment rate at retailer
+AIM	inventory discrepancy adjustment rate at Distributor
+AIR	inventory discrepancy adjustment rate at retailer
+alphaM	fractional rate of adjustment of medicine on order discrepancy at Distributor
+alphaR	fractional rate of adjustment of medicine on order discrepancy at retailer
+AOM	medicine on order discrepancy adjustment rate at Distributor
+AOR	medicine on order discrepancy adjustment rate at retailer
+ARi	hospital arrival rate
+betaM	fractional rate of adjustment of medicine inventory discrepancy at Distributor
+betaR	fractional rate of adjustment of medicine inventory discrepancy at retailer
+CFM	change in forcasted demand at Distributor
+CFR	change in forcasted demand at retailer
+DCM	desired inventory coverage at Distributor
+DCR	desired inventory coverage at retailer
+deltaM	fractional rate of adjustment of medicine backlog discrepancy at Distributor
+deltaR	fractional rate of adjustment of medicine backlog discrepancy at retailer
+DIM	desired inventory at Distributor
+DIR	desired inventory at retailer
+DOM	desired medicine on order at Distributor
+DOR	desired medicine on order at retailer
+DRR	medicine demand rate at retailer
+DRR0	initial demand
+DSM	Desired shipment rate at Distributor
+DSR	Desired shipment rate at retailer
+Ei	Exposed population
+ERi	exposure rate
+FDM	Forecasted demand at Distributor
+FDR	Forecasted demand at retailer
+FESi	Final epidmeic size
+FINAL TIME	The final time for the simulation.
+gamma i	infectivity
+Ii	Infected population waiting for treatment
+in	total recovery rate
+INITIAL TIME	The initial time for the simulation.
+IRi	infection rate
+k	infectivity of treatment class
+MBM	medicine backlog at Distributor
+MBR	medicine backlog at retailer
+MIM	medicine inventory at Distributor
+MIR	medicine inventory at retailer
+MOM	medicine on order at Distributor
+MOR	medicine on order at retailer
+MSM	maximum shipment rate at Distributor
+MSR	maximum shipment rate at retailer
+MTM	medicine in transit at Distributor
+MTR	medicine in transit at retailer
+n	medicine units require per person
+NBM	normal medicine backlog at Distributor
+NBR	normal medicine backlog at retailer
+Ni	total population
+OAM	Order arrival rate at Distributor
+OAR	Order arrival rate at retailer
+OFM	Order fill rate at Distributor
+OFR	Order fill rate at retailer
+ORM	order rate at Distributor
+ORR	order rate at retailer
+Pi	incubation period
+PRM	production rate at Distributor
+PRR	production rate at retailer
+rhoM	average demand smoothing rate at Distributor
+rhoR	average demand smoothing rate at retailer
+Ri	Recovered population
+RRi	recovery rate without medicine
+RRMi	recovery rate with medicine
+SAVEPER	The frequency with which output is stored.
+Si	Susceptible population
+SRM	medicine shipment rate from Distributor to retailer
+SRR	medicine shipment rate from retailer to hospital
+SSM	safety stock at Distributor
+SSR	safety stock at retailer
+Ti	Infected population and under treatment
+TIME STEP	The time step for the simulation.
+TLM	production leadtime at Distributor
+TLR	production leadtime at retailer
+TOM	Time to fill order at Distributor
+TOR	Time to fill order at retailer
+TRi	time to recover without medicine
+TRMi	time to recover with medicine
+TSM	Time to ship medicine at Distributor
+TSR	Time to ship medicine at retailer
+TWi	waning time
+UnitTime	time step
+WRi	waning rate
+WT	average waiting time for medicine

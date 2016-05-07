@@ -1,0 +1,26 @@
+AR	hospital arrival rate
+E	Exposed population
+ER	exposure rate
+FES	Final epidmeic size
+FINAL TIME	The final time for the simulation.
+gamma	infectivity
+I	Infected population waiting for treatment
+in	total recovery rate
+INITIAL TIME	The initial time for the simulation.
+IR	infection rate
+k	Infectivity of treatment class
+N	total population
+P	incubation period
+R	Recovered population
+RR	recovery rate without medicine
+RRM	recovery rate with medicine
+S	Susceptible population
+SAVEPER	The frequency with which output is stored.
+T	Infected population and under treatment
+TDV	Time to distribute vaccine
+TIME STEP	The time step for the simulation.
+TR	time to recover without medicine
+TRM	time to recover with medicine
+TW	waning time
+WR	waning rate
+WT	average waiting time for medicine

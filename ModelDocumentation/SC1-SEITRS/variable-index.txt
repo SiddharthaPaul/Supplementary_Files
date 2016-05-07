@@ -1,0 +1,57 @@
+ABR	backlog discrepancy adjustment rate at retailer
+AIR	inventory discrepancy adjustment rate at retailer
+alphaR	fractional rate of adjustment of medicine on order discrepancy at retailer
+AOR	medicine on order discrepancy adjustment rate at retailer
+ARi	hospital arrival rate
+betaR	fractional rate of adjustment of medicine inventory discrepancy at retailer
+CFR	change in forcasted demand at retailer
+DCR	desired inventory coverage at retailer
+deltaR	fractional rate of adjustment of medicine backlog discrepancy at retailer
+DIR	desired inventory at retailer
+DOR	desired medicine on order at retailer
+DRR	medicine demand rate at retailer
+DRR0	initial demand
+DSR	Desired shipment rate at retailer
+Ei	Exposed population
+ERi	exposure rate
+FDR	Forecasted demand at retailer
+FESi	Final epidmeic size
+FINAL TIME	The final time for the simulation.
+gamma i	infectivity
+Ii	Infected population waiting for treatment
+in	total recovery rate
+INITIAL TIME	The initial time for the simulation.
+IRi	infection rate
+k	infectivity of treatment class
+MBR	medicine backlog at retailer
+MIR	medicine inventory at retailer
+MOR	medicine on order at retailer
+MSR	maximum shipment rate at retailer
+MTR	medicine in transit at retailer
+n	medicine units require per person
+NBR	normal medicine backlog at retailer
+Ni	total population
+OAR	Order arrival rate at retailer
+OFR	Order fill rate at retailer
+ORR	order rate at retailer
+Pi	incubation period
+PRR	production rate at retailer
+rhoR	average demand smoothing rate at retailer
+Ri	Recovered population
+RRi	recovery rate without medicine
+RRMi	recovery rate with medicine
+SAVEPER	The frequency with which output is stored.
+Si	Susceptible population
+SRR	medicine shipment rate from retailer to hospital
+SSR	safety stock at retailer
+Ti	Infected population and under treatment
+TIME STEP	The time step for the simulation.
+TLR	production leadtime at retailer
+TOR	Time to fill order at retailer
+TRi	time to recover without medicine
+TRMi	time to recover with medicine
+TSR	Time to ship medicine at retailer
+TWi	waning time
+UnitTime	time step
+WRi	waning rate
+WT	average waiting time for medicine
